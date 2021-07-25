@@ -55,6 +55,9 @@ export default {
   div.guide-container.xs {
     transform: rotate(3deg);
   }
+  div.guide-container.xxl a {
+    margin-top: 300px;
+  }
   div.guide-container.lg  {
     margin-top: -100px;
   }

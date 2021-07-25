@@ -1,0 +1,13 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: home-ingress
+spec:
+  rules:
+  - host: home.skinnyjames.net
+    http:
+      paths:
+      - backend:
+          serviceName: home
+          servicePort: 80
