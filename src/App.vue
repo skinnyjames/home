@@ -4,9 +4,6 @@
     <CrossStitch/>
     <Selfie>
       <StreetGuide/>
-      <div style="margin-top: 4000px;">
-          Hello
-      </div>
     </Selfie>
   </HomeScreen>
 </template>

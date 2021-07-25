@@ -1,10 +1,10 @@
 <template>
-  <mq-layout mq='lg+'>
-    <div class="guide" :class="$mq">
+  <div class="guide-container" :class="$mq">
+    <div class="guide">
       <img src="/images/street.png"/>
-      <a name="street" href="/pdf/street-guide.pdf" target="_blank"><span>A Schizophrenic's Guide to the Street <br><i class="fas fa-file-download"></i></span></a>
     </div>
-  </mq-layout>
+    <a name="street" href="/pdf/street-guide.pdf" target="_blank"><span>A Schizophrenic's Guide to the Street <br><i class="fas fa-file-download"></i></span></a>
+  </div>
 </template>
 
 <script>
@@ -15,51 +15,94 @@ export default {
 </script>
 
 <style scoped>
-  span {
-    position: absolute;
-    margin-top: 350px;
+  a {
+    text-decoration: none;
+    margin-top: 400px;
     font-size: 40px;
-    font-weight: bold;
     margin-left: 20px;
+    width: 250px;
+    display: block;
+    z-index: 4;
+
+  }
+  span {
+    font-weight: bold;
+    display: block;
     background-color: #886210;
     color: transparent;
     text-shadow: 2px 2px 3px rgba(255,255,255,0.6);
     background-clip: text;
     font-family: 'Patrick Hand SC', cursive;
   }
-  span:hover {
+  a:hover span {
     background-color:  #a17005;
     cursor: pointer;
   }
-  div.guide {
-    position: relative;
-    z-index: 4;
+  div.guide-container div.guide {
     padding: 0;
     margin: 0;
     box-shadow: rgba(0, 0, 0, .4) 1px 2px 2px;
-    transform: rotate(10deg);
+    margin-left: 150px;
   }
-  div.guide.lg {
-    margin-top: -300px;
+  div.guide-container {
+    transform: rotate(10deg);
+    margin-top: 100px;
+    position: relative;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+  }
+  div.guide-container.xs {
+    transform: rotate(3deg);
+  }
+  div.guide-container.lg  {
+    margin-top: -100px;
+  }
+  div.guide-container.lg a {
+    margin-top: 250px;
+  }
+  div.guide-container.md {
+    margin-top: 0px;
+  }
+  div.guide-container.md a {
+    margin-top: 150px;
+    font-size: 35px;
+  }
+  div.guide-container.sm a {
+    margin-top: 170px;
+    font-size: 25px;
+  }
+  div.guide-container.md div.guide {
+    margin-top: -30px;
   }
 
-  div.guide.md {
-    margin-top: -300px;
+  div.guide-container.xs div.guide {
+    margin-left: 0px;
   }
-  div.guide.sm {
-    margin-top: -250px;
+  div.guide-container.sm {
+    margin-top: 30px;
   }
-  div.guide.xs {
-    margin-top: -550px;
+  div.guide-container.xs {
+    margin-top: 50px;
   }
-  div.guide.md img {
-    height: 450px;
+  div.guide-container.lg img {
+    height: 500px;
   }
-  div.guide.sm img {
+  div.guide-container.md img {
     height: 350px;
   }
-  div.guide.xs img{
-    height: 250px;
+  div.guide-container.sm img {
+    height: 350px;
+  }
+  div.guide-container.xs img{
+    height: 180px;
+  }
+  div.guide-container.xs a, div.guide.xs span {
+    margin-top: 60px;
+    font-size: 25px;
+  }
+  div.guide.xs {
+    margin-left: 0px;
   }
   
 </style>

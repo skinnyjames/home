@@ -34,38 +34,49 @@
     background-size: contain;
   }
   div.self.xs {
-    height: 1100px;
+    height: 500px;
+    min-height: unset;
   }
   div.self.sm {
-    height: 10000px;
+    height: 800px;
+    min-height: unset;
   }
-  div.self.sm, div.self.md {
+  div.self.md {
     height: 1400px;
+    min-height: unset;
+  }
+  div.self.md {
+    height: 1000px;
+    min-height: unset;
+  }
+  div.self.lg {
+    height: 1200px;
+    min-height: unset;
   }
 
   div.table {
     width: 100%;
-    min-height: 800px;
+    min-height: 1800px;
     z-index: 1;
     margin-top: -540px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     background: url('/images/retina_wood.png') repeat;
   }
   div.table.tiny {
     margin-top: -900px;
   }
   div.table.sm {
-    margin-top: -800px;
+    margin-top: -230px;
   }
   div.table.xs {
-    margin-top: -700px;
+    margin-top: -100px;
   }
   div.table.md {
-    margin-top: -600px;
+    margin-top: -200px;
   }
   div.table.lg {
-    margin-top: -800px;
+    margin-top: -200px;
   }
 
 </style>

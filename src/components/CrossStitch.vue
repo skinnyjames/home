@@ -3,7 +3,7 @@
   <div class="frame" :class="$mq">
     <div id="sampler" :class="$mq">
       <ul>
-        <li>Thinker</li>
+        <li><a href="mailto:sean.christopher.gregory@gmail.com">Thinker</a></li>
         <li><a target="_blank" href="https://www.github.com/skinnyjames">Programmer</a></li>
         <li><a target="_blank" href="http://home.skinnyjames.net">sean gregory</a></li>
         <li><a target="_blank" href="https://vimeo.com/578952197">Conceptual Artist</a></li>
@@ -223,8 +223,8 @@ export default {
     left: 40px;
   }
   div#sampler.xs li:nth-child(3) {
-    top: 180px;
-    right: 104px;
+    top: 60px;
+    right: 64px;
   }
   div#sampler.xs li:nth-child(4) {
     top: 80px;
