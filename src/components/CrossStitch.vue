@@ -228,6 +228,7 @@ export default {
   }
   div#sampler.xs li:nth-child(4) {
     top: 80px;
+    font-size: 32px;
     left: 10px;
   }
   div#sampler.xs li:nth-child(5) {
