@@ -41,8 +41,10 @@ export default {
   div.guide-container div.guide {
     padding: 0;
     margin: 0;
-    box-shadow: rgba(0, 0, 0, .4) 1px 2px 2px;
     margin-left: 150px;
+  }
+  div.guide-container div.guide img {
+    box-shadow: rgba(0, 0, 0, .4) 1px 2px 2px;
   }
   div.guide-container {
     transform: rotate(10deg);

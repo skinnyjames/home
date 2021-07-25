@@ -3,7 +3,7 @@
   <div class="frame" :class="$mq">
     <div id="sampler" :class="$mq">
       <ul>
-        <li><a href="mailto:sean.christopher.gregory@gmail.com">Thinker</a></li>
+        <li><a href="mailto:seanchristophergregory@gmail.com?subject=Thoughts">Thinker</a></li>
         <li><a target="_blank" href="https://www.github.com/skinnyjames">Programmer</a></li>
         <li><a target="_blank" href="http://home.skinnyjames.net">sean gregory</a></li>
         <li><a target="_blank" href="https://vimeo.com/578952197">Conceptual Artist</a></li>
