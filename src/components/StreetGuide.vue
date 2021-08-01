@@ -3,7 +3,7 @@
     <div class="guide">
       <img src="/images/street.png"/>
     </div>
-    <a name="street" href="/pdf/street-guide.pdf" target="_blank"><span>A Schizophrenic's Guide to the Street <br><i class="fas fa-file-download"></i></span></a>
+    <a name="street" href="https://docs.google.com/document/d/1opeKgwEukMxzT2zRbJArpV2eH9-yisONlZVb1ck93TY/edit?usp=sharing" target="_blank"><span>A Schizophrenic's Guide to the Street <br><i class="fas fa-file-download"></i></span></a>
   </div>
 </template>
 

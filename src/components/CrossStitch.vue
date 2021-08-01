@@ -3,11 +3,11 @@
   <div class="frame" :class="$mq">
     <div id="sampler" :class="$mq">
       <ul>
-        <li><a href="mailto:seanchristophergregory@gmail.com?subject=Thoughts">Thinker</a></li>
+        <li><a target="_blank" href="https://youtu.be/v6EBnI8uTy8">Poet?</a></li>
         <li><a target="_blank" href="https://www.github.com/skinnyjames">Programmer</a></li>
-        <li><a target="_blank" href="http://home.skinnyjames.net">sean gregory</a></li>
+        <li><a target="_blank" href="mailto:seanchristophergregory@gmail.com?subject=Thoughts">sean gregory</a></li>
         <li><a target="_blank" href="https://vimeo.com/578952197">Conceptual Artist</a></li>
-        <li><a target="_blank" href="https://www.reddit.com/r/AskReddit/comments/lsms5/making_a_spider_pi%C3%B1ata_to_be_filled_with_spiders/">Trickster</a></li>
+        <li><a target="_blank" href="https://www.reddit.com/r/AskReddit/comments/lsms5/making_a_spider_pi%C3%B1ata_to_be_filled_with_spiders/">Thinker</a></li>
         <li><a target="_blank" href="https://open.spotify.com/artist/0wqTcreN6E418WVF3e82kV">Rapper</a></li>
         <li><a target="_blank" href="https://www.instagram.com/sean.christopher.gregory/">Painter</a></li>
       </ul>
