@@ -56,23 +56,27 @@
 
   div.table {
     width: 100%;
-    min-height: 1800px;
+    min-height: 1000px;
     z-index: 1;
     margin-top: -540px;
     display: flex;
     flex-direction: column;
     background: url('/images/retina_wood.png') repeat;
   }
+
   div.table.tiny {
     margin-top: -900px;
   }
   div.table.sm {
+    min-height: 600px;
     margin-top: -230px;
   }
   div.table.xs {
+    min-height: 400px;
     margin-top: -100px;
   }
   div.table.md {
+    min-height: 600px;
     margin-top: -200px;
   }
   div.table.lg {

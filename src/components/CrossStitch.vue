@@ -7,7 +7,7 @@
         <li><a target="_blank" href="https://www.github.com/skinnyjames">Programmer</a></li>
         <li><a target="_blank" href="mailto:seanchristophergregory@gmail.com?subject=Thoughts">sean gregory</a></li>
         <li><a target="_blank" href="https://vimeo.com/578952197">Conceptual Artist</a></li>
-        <li><a target="_blank" href="https://www.reddit.com/r/AskReddit/comments/lsms5/making_a_spider_pi%C3%B1ata_to_be_filled_with_spiders/">Trickster</a></li>
+        <li><a target="_blank" href="https://www.reddit.com/r/AskReddit/comments/lsms5/making_a_spider_pi%C3%B1ata_to_be_filled_with_spiders/">"Trickster"</a></li>
         <li><a target="_blank" href="https://open.spotify.com/artist/0wqTcreN6E418WVF3e82kV">Rapper</a></li>
         <li><a target="_blank" href="https://www.instagram.com/sean.christopher.gregory/">Painter</a></li>
       </ul>
@@ -147,8 +147,8 @@ export default {
   }
   div#sampler li:nth-child(5) {
     color: #1ec1bb;
-    bottom: 100px;
-    left: 250px;
+    bottom: 110px;
+    left: 220px;
   }
   div#sampler li:nth-child(6) {
     color: #2d751c;
@@ -195,8 +195,8 @@ export default {
   div#sampler.sm li:nth-child(5), div#sampler.xs li:nth-child(5) {
     font-size: 28px;
     color: #1ec1bb;
-    bottom: 40px;
-    left: 100px;
+    bottom: 45px;
+    left: 80px;
   }
   div#sampler.sm li:nth-child(6), div#sampler.xs li:nth-child(6) {
     color: #2d751c;
@@ -232,16 +232,16 @@ export default {
     left: 10px;
   }
   div#sampler.xs li:nth-child(5) {
-    bottom: 30px;
-    left: 80px;
+    bottom: 35px;
+    left: 60px;
   }
   div#sampler.xs li:nth-child(6) {
     bottom: 25px;
-    right: 30px;
+    right: 32px;
   }
   div#sampler.xs li:nth-child(7) {
     bottom: 14px;
-    left: 60px;
+    left: 40px;
   }
 
   /* medium */
@@ -268,7 +268,7 @@ export default {
   div#sampler.md li:nth-child(5) {
     font-size: 48px;
     bottom: 80px;
-    left: 130px;
+    left: 100px;
   }
   div#sampler.md li:nth-child(6) {
     font-size: 40px;
