@@ -1,0 +1,98 @@
+<script setup>
+var svg = document.getElementsByTagName("svg")[0]
+var rect = document.getElementsByTagName("rect")[0]
+var path = document.getElementsByTagName("path")[0]
+var stops = document.getElementsByTagName("stop")
+var animate = document.getElementsByTagName("animate")[0]
+
+var index = 1
+var deg = 90
+var polygons = [
+  {
+    type: "hexagon",
+    polygon: "50 0 100 25 100 75 50 100 0 75 0 25",
+    path: "M 47.41421356237309 62.58578643762691 L 62.58578643762691 47.41421356237309 C 63.292893218813454 46.707106781186546 64 45 64 44 L 64 20 C 64 19 63.292893218813454 17.292893218813454 62.58578643762691 16.585786437626904 L 47.41421356237309 1.4142135623730947 C 46.707106781186546 0.7071067811865474 45 0 44 0 L 20 0 C 19 0 17.292893218813454 0.7071067811865475 16.585786437626904 1.414213562373095 L 1.414213562373095 16.585786437626904 C 0.7071067811865475 17.292893218813454 0 19 0 20 L 0 44 C 0 45 0.7071067811865475 46.707106781186546 1.414213562373095 47.41421356237309 L 16.585786437626904 62.58578643762691 C 17.292893218813454 63.292893218813454 19 64 20 64 L 44 64 C 45 64 46.707106781186546 63.292893218813454 47.41421356237309 62.58578643762691 Z",
+    stop: [ ["40", "rgba(214,15,121,1)"], ["5", "rgba(87,33,173,1)"] ],
+    width: "105",
+    height: "120"
+  },
+  {
+    type: "triangle",
+    polygon: "50 0 100 100 100 100 50 100 0 100 0 100",
+    path: "M 48 64 L 62 64 C 63 64 63.55278640450004 63.10557280900008 63.10557280900009 62.21114561800017 L 48.89442719099991 33.78885438199983 C 48.44721359549996 32.89442719099992 47.55278640450004 31.105572809000083 47.10557280900009 30.211145618000167 L 32.89442719099991 1.7888543819998315 C 32.44721359549996 0.8944271909999157 32 0 32 0 L 32 0 C 32 0 31.55278640450004 0.8944271909999159 31.105572809000083 1.7888543819998317 L 16.894427190999917 30.211145618000167 C 16.44721359549996 31.105572809000083 15.552786404500042 32.89442719099992 15.105572809000083 33.78885438199983 L 0.8944271909999157 62.21114561800017 C 0.44721359549995787 63.10557280900008 1 64 2 64 L 16 64 C 17 64 19 64 20 64 L 44 64 C 45 64 47 64 48 64 Z",
+    stop: [ ["30", "rgba(68,195,255,1)"], ["40", "rgba(34,68,171,1)"] ],
+    width: "120",
+    height: "105"
+  },
+  {
+    type: "pentagon",
+    polygon: "50 0 100 38 82 100 18 100 0 38 0 38",
+    path: "M 48.89442719099991 62.21114561800017 L 55.10557280900009 49.78885438199983 C 55.55278640450004 48.89442719099992 56.40613846605345 47.08618845137974 56.8122769321069 46.17237690275949 L 63.1877230678931 31.827623097240515 C 63.59386153394655 30.91381154862026 63.27046279585991 29.31605887111867 62.54092559171983 28.63211774223734 L 33.45907440828017 1.3678822577626597 C 32.72953720414009 0.6839411288813299 32 0 32 0 L 32 0 C 32 0 31.270462795859913 0.6839411288813299 30.54092559171983 1.3678822577626597 L 1.4590744082801703 28.63211774223734 C 0.7295372041400852 29.31605887111867 0.40613846605344767 30.91381154862026 0.8122769321068953 31.827623097240515 L 7.187723067893105 46.17237690275949 C 7.593861533946552 47.08618845137974 8.447213595499958 48.89442719099992 8.894427190999917 49.78885438199983 L 15.105572809000083 62.21114561800017 C 15.552786404500042 63.10557280900008 17 64 18 64 L 46 64 C 47 64 48.44721359549996 63.10557280900008 48.89442719099991 62.21114561800017 Z",
+    stop: [ ["11", "rgba(245,231,73,1)"], ["79", "rgba(254,182,69,1)"] ],
+    width: "105",
+    height: "100"
+  }
+]
+
+// make the path fit exactly the SVG box:
+var fitSVG = function(){
+  var box = path.getBBox()
+  var eleWidth = box.width
+  var eleHeight = box.height
+  path.style.transform = "scale("+100/eleWidth+", "+100/eleHeight+")"
+}
+
+const morph = () => {
+  // rotate svg:
+  deg = deg + 90 || 90
+  svg.style.transform = "rotate("+ deg +"deg)"
+
+  // update gradient:
+  stops[0].style.cssText = "offset: "+ polygons[index].stop[0][0] +"%; stop-color: "+ polygons[index].stop[0][1] +";"
+  stops[1].style.cssText = "offset: "+ polygons[index].stop[1][0] +"%; stop-color: "+ polygons[index].stop[1][1] +";"
+
+  // morph shape, from one polygon to another:
+  animate.setAttribute("from", polygons[index === 0 ? 2 : index - 1].path)
+  animate.setAttribute("to", polygons[index].path)
+  animate.beginElement()
+
+  fitSVG()
+
+  index++
+  index = index === 3 ? 0 : index
+}
+
+path.setAttribute("d", polygons[0].path)
+morph()
+
+setInterval(function(){
+  morph()
+}, 1200)
+</script>
+
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="5%" stop-color="rgba(214,15,121,1)" />
+        <stop offset="66%" stop-color="rgba(87,33,173,1)" />
+      </linearGradient>
+      <clipPath id="mask">
+        <path>
+          <animate begin="indefinite" fill="freeze" attributeName="d" dur="250ms"/>
+        </path>
+      </clipPath>
+    </defs>
+    <rect x="0" y="0" width="100px" height="100%" style="fill: url(#gradient);" clip-path="url(#mask)"></rect>
+  </svg>
+</template>
+
+<style scoped>
+  svg {
+    transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+  }
+
+  stop {
+    transition: all .5s;
+  }
+</style>

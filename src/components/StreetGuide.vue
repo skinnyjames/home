@@ -1,14 +1,15 @@
 <template>
   <div class="guide-container" :class="$mq">
     <div class="guide">
-      <img src="/images/street.png"/>
+      <img :src="image" />
     </div>
-    <a name="street" href="https://docs.google.com/document/d/1opeKgwEukMxzT2zRbJArpV2eH9-yisONlZVb1ck93TY/edit?usp=sharing" target="_blank"><span>A Schizophrenic's Guide to the Street <br><i class="fas fa-file-download"></i></span></a>
+    <a :href="link" target="_blank"><span>{{ text }}<br><i class="fas fa-file-download"></i></span></a>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['image', 'text', 'link', 'mirrored'],
   name: 'StreetGuide',
   components: {}
 }
@@ -23,8 +24,8 @@ export default {
     width: 250px;
     display: block;
     z-index: 4;
-
   }
+
   span {
     font-weight: bold;
     display: block;
@@ -54,6 +55,7 @@ export default {
     display: flex;
     justify-content: center;
   }
+
   div.guide-container.xs {
     transform: rotate(3deg);
   }

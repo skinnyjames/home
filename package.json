@@ -11,6 +11,8 @@
     "chokidar": "^3.5.2",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
+    "vue-parallaxy": "^1.1.1",
+    "vue-router": "^4.0.14",
     "vue3-mq": "^2.3.1",
     "vue3-styled-components": "^1.2.1"
   },
@@ -29,13 +31,15 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
+      "plugin:vue/vue3-recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",
